@@ -29,7 +29,7 @@
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.2.2</version>
+			<version>3.0.2</version>
 		</dependency>
 
 		<dependency>
@@ -43,7 +43,7 @@
 			<optional>true</optional>
 		</dependency>
 
-		<!--引入数据库的驱动 -->
+		<!--引入SqlServer数据库的驱动 -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
