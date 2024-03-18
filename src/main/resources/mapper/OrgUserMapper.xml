@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miygo.msim.mapper.OrgUserMapper">
+    <select id="queryUserList" resultType="com.miygo.msim.entity.OrgUserEntity">
+        SELECT * FROM [SEC_User]
+        <where>
+            1 = 1
+            <if test="orgId != null">
+                AND [OrgId] = #{orgId}
+            </if>
+            <if test="userId != null">
+                AND [Id] = #{userId}
+            </if>
+            <if test="userName != null">
+                AND [Name] LIKE concat('%', #{userName}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>
