@@ -1,6 +1,6 @@
 package com.miygo.msim.controller.vo;
 
-import com.miygo.msim.entity.OrgUserEntity;
+import com.miygo.msim.entity.org.OrgUserEntity;
 import lombok.Data;
 
 import java.util.Date;

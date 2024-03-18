@@ -1,5 +1,6 @@
-package com.miygo.msim.entity;
+package com.miygo.msim.entity.org;
 
+import com.miygo.msim.entity.BaseEntity;
 import lombok.Data;
 
 import java.util.Date;

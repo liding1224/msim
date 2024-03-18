@@ -1,9 +1,9 @@
-package com.miygo.msim.controller;
+package com.miygo.msim.controller.org;
 
 import com.miygo.msim.controller.vo.BaseResponse;
 import com.miygo.msim.controller.vo.OrgUserVo;
-import com.miygo.msim.entity.OrgUserEntity;
-import com.miygo.msim.service.OrgUserService;
+import com.miygo.msim.entity.org.OrgUserEntity;
+import com.miygo.msim.service.org.OrgUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
