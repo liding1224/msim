@@ -1,0 +1,40 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miygo.msim.mapper.org.OrgUserMapper">
+    <resultMap id="OrgUserResultMap" type="com.miygo.msim.entity.org.OrgUserEntity">
+        <result column="Id" property="id"></result>
+        <result column="Name" property="name"></result>
+        <result column="LoginId" property="loginId"></result>
+        <result column="Password" property="password"></result>
+        <result column="Email" property="email"></result>
+        <result column="MobilePhone" property="mobilePhone"></result>
+        <result column="IM" property="im"></result>
+        <result column="Telephone" property="telPhone"></result>
+        <result column="Sex" property="sex"></result>
+        <result column="Birthday" property="birthday"></result>
+        <result column="OrgId" property="orgId"></result>
+        <result column="Order" property="order"></result>
+        <result column="LastLoginDate" property="lastLoginDate"></result>
+        <result column="Enabled" property="enabled"></result>
+        <result column="CreatedBy" property="createdBy"></result>
+        <result column="CreatedDate" property="createdDate"></result>
+        <result column="LastUpdatedBy" property="lastUpdatedBy"></result>
+        <result column="LastUpdatedDate" property="lastUpdatedDate"></result>
+    </resultMap>
+    <select id="queryUserList" resultMap="OrgUserResultMap">
+        SELECT * FROM [SEC_User]
+        <where>
+            1 = 1
+            <if test="orgId != null">
+                AND [OrgId] = #{orgId}
+            </if>
+            <if test="userId != null">
+                AND [Id] = #{userId}
+            </if>
+            <if test="userName != null">
+                AND [Name] LIKE concat('%', #{userName}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>

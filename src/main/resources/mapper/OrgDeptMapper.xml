@@ -1,0 +1,35 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.miygo.msim.mapper.org.OrgDeptMapper">
+    <resultMap id="OrgDeptResultMap" type="com.miygo.msim.entity.org.OrgDeptEntity">
+        <result column="Id" property="id"></result>
+        <result column="Parent" property="parent"></result>
+        <result column="Name" property="name"></result>
+        <result column="Code" property="code"></result>
+        <result column="Level" property="level"></result>
+        <result column="Order" property="order"></result>
+        <result column="DeptFullName" property="deptFullName"></result>
+        <result column="ICode" property="icode"></result>
+        <result column="Enabled" property="enabled"></result>
+        <result column="OrgType" property="orgType"></result>
+        <result column="TelPhone" property="telPhone"></result>
+        <result column="ContactName" property="contactName"></result>
+        <result column="CreatedBy" property="createdBy"></result>
+        <result column="CreatedDate" property="createdDate"></result>
+        <result column="LastUpdatedBy" property="lastUpdatedBy"></result>
+        <result column="LastUpdatedDate" property="lastUpdatedDate"></result>
+    </resultMap>
+    <select id="queryDeptList" resultMap="OrgDeptResultMap">
+        SELECT * FROM [SEC_Organization]
+        <where>
+            1 = 1
+            <if test="orgId != null">
+                AND [Id] = #{orgId}
+            </if>
+            <if test="orgName != null">
+                AND [Name] LIKE concat('%', #{orgName}, '%')
+            </if>
+        </where>
+    </select>
+</mapper>
