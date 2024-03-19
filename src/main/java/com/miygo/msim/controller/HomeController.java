@@ -9,6 +9,6 @@ public class HomeController {
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("SysName", "订单管理系统");
-        return "home/index";
+        return "Index";
     }
 }

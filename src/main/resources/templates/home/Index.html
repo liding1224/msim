@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>商品管理系统</title>
+    <title>商品订单管理系统</title>
     <link rel="stylesheet" th:href="@{/webjars/layui/css/layui.css}">
 </head>
 <body>
@@ -13,8 +13,8 @@
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item layui-hide layui-show-md-inline-block">
                 <a href="javascript:;">
-                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2F64%2F91%2Fcb%2F6491cb60f57cc1676e54dd45ce4c28d7.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669942248&t=9cc393896378b527a483d632762795db" class="layui-nav-img">
-                    二十七
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fup.enterdesk.com%2Fedpic%2F64%2F91%2Fcb%2F6491cb60f57cc1676e54dd45ce4c28d7.jpg&refer=http%3A%2F%2Fup.enterdesk.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1669942248&t=9cc393896378b527a483d632762795db" class="layui-nav-img" />
+                    Admin
                 </a>
                 <dl class="layui-nav-child">
                     <dd><a href="">退出登陆</a></dd>
@@ -33,16 +33,17 @@
             <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
             <ul class="layui-nav layui-nav-tree" lay-filter="test">
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">商品管理</a>
+                    <a class="" href="javascript:;">系统管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a th:href="'javascript:showTab(\'goods/goodsList\',\'商品列表\',1);'">商品列表</a></dd>
-                        <dd><a th:href="'javascript:showTab(\'goods/goodsDetail\',\'商品详情\',2);'">商品详情</a></dd>
+                        <dd><a th:href="'javascript:showTab(\'sys/orgList\',\'公司管理\',1);'">公司管理</a></dd>
+                        <dd><a th:href="'javascript:showTab(\'sys/userList\',\'人员管理\',2);'">人员管理</a></dd>
+                        <dd><a th:href="'javascript:showTab(\'sys/roleList\',\'角色管理\',3);'">角色管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">标签管理</a>
+                    <a href="javascript:;">新建事项</a>
                     <dl class="layui-nav-child">
-                        <dd><a th:href="'javascript:showTab(\'tag/tagList\',\'标签列表\',3);'">标签列表</a></dd>
+                        <dd><a th:href="'javascript:showTab(\'tag/tagList\',\'标签列表\',4);'">综合事务</a></dd>
                     </dl>
                 </li>
             </ul>
