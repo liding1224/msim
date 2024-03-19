@@ -1,5 +1,6 @@
-package com.miygo.msim.controller.vo;
+package com.miygo.msim.controller.vo.org;
 
+import com.miygo.msim.controller.vo.BaseVo;
 import com.miygo.msim.entity.org.OrgUserEntity;
 import lombok.Data;
 
