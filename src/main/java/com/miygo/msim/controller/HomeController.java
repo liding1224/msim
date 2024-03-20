@@ -10,21 +10,21 @@ public class HomeController {
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("SYS_NAME", UIConstants.SYS_NAME);
-        return "index1";
+        return "home/index";
     }
 
     @RequestMapping("/org/orgList")
-    public String orgList(){
+    public String orgList(Model model){
         return "modules/org/orgList";
     }
 
     @RequestMapping("/org/userList")
-    public String userList(){
+    public String userList(Model model){
         return "modules/org/userList";
     }
 
     @RequestMapping("/org/roleList")
-    public String roleList(){
+    public String roleList(Model model){
         return "modules/org/roleList";
     }
 }
