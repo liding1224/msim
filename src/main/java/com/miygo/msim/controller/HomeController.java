@@ -12,4 +12,19 @@ public class HomeController {
         model.addAttribute("SYS_NAME", UIConstants.SYS_NAME);
         return "home/index";
     }
+
+    @RequestMapping("/org/orgList")
+    public String orgList(){
+        return "modules/org/orgList";
+    }
+
+    @RequestMapping("/org/userList")
+    public String userList(){
+        return "modules/org/userList";
+    }
+
+    @RequestMapping("/org/roleList")
+    public String roleList(){
+        return "modules/org/roleList";
+    }
 }
