@@ -17,7 +17,6 @@ var HomeManager = (function (){
         if ($tabFrame.length == 0 && !!element) {
             let tabName = $target.text() || tabId;
             let tabUrl = "/" + tabId.replaceAll("_", "/");
-            alert(tabUrl);
             let tabHeight = self.$window.height() - 185;
             let tabContent = '<iframe style="width:100%; height: ' + tabHeight + 'px" src="' + tabUrl + '" frameborder="0" scrolling="yes">';
             element.tabAdd('menu', {
