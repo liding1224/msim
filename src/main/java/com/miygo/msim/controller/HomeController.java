@@ -10,7 +10,7 @@ public class HomeController {
     @RequestMapping("/")
     public String index(Model model){
         model.addAttribute("SYS_NAME", UIConstants.SYS_NAME);
-        return "home/index";
+        return "index1";
     }
 
     @RequestMapping("/org/orgList")
